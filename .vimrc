@@ -66,17 +66,17 @@ set magic
 set smarttab
 
 " Set tabs and their width for kernel development
-if (system('pwd | grep "/home/alexandrucm/Work/SO2"') != "")
-    "echom "Working on kernel stuff"
-    set noexpandtab
-    set shiftwidth=8
-    set tabstop=8
-else
-    "echom "Not working on kernel stuff"
-    set expandtab
-    set shiftwidth=4
-    set tabstop=4
-endif
+"if (system('pwd | grep "/home/alexandrucm/Work/SO2/linux/tools/labs/skels/assignments/2-uart"') != "")
+    ""echom "Working on kernel stuff"
+    "set noexpandtab
+    "set shiftwidth=8
+    "set tabstop=8
+"else
+    ""echom "Not working on kernel stuff"
+    "set expandtab
+    "set shiftwidth=4
+    "set tabstop=4
+"endif
 
 set ai
 set si
@@ -301,6 +301,9 @@ call dutyl#register#tool('dcd-server', '/home/ubuntu/.vim/bundle/DCD/bin/dcd-ser
 
 nnoremap <F10> :DUvjump<CR>
 nnoremap <F11> :DUddoc<CR>
+
+"see class definition"
+nnoremap <C-t> vi{zf
 
 let mapleader = ";"
 
